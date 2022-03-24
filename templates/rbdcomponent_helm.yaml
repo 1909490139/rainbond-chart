@@ -673,10 +673,10 @@ items:
     {{- end }}
     {{- if .Values.Component.rbd_api.env }}
     env:
-    {{- range $key,$value := .Values.Component.rbd_api.env }}
+      {{- range $key,$value := .Values.Component.rbd_api.env }}
     - name: {{ $key }}
       value: "{{ $value }}"
-    {{- end }}
+      {{- end }}
     {{- end }}
     {{- if .Values.Component.rbd_api.volumeMounts }}
     volumeMounts:
